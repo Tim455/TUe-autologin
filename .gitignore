@@ -1,3 +1,7 @@
+# The passwords and stuff
+secrets.js
+build/*
+
 # Logs
 logs
 *.log

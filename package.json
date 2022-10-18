@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "otplib": "^12.0.1"
+  },
+  "devDependencies": {
+    "esmify": "^2.1.1"
+  }
+}
