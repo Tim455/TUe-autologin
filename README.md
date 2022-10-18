@@ -7,11 +7,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-This code stores your OTP token in clear text, making almost entirely useless. 
-
 # TU/e autologin
 
-*THIS USERSCRIPT DOES NOT STORE YOUR PASSWORD AND OTP SECRET SECURELY*! 
+*THIS USERSCRIPT DOES NOT STORE YOUR PASSWORD SECURELY*! 
 
 *Please do not* use this userscript especially if you have access to somebody elses data. You are not the person that should decide if it is worth the risk. 
 
@@ -25,12 +23,11 @@ To build the usescript run:
 ```git clone git@github.com:Tim455/TUe-autologin.git && cd TUe-autologin```
 2. Rename secrets.js.example to secrets.js 
 ```mv secrets.js.example secrets.js```
-3. Enter your own login credentials and your own OTP secret. You are the sole person responsible for keeping this secret and password secure, by entering it into the script you know that it is less secure and decide to take the risk anyways. I do NOT take liability for this. 
-4. Install the dependencies `npm install`
-6. Build the userscript with 
+3. Install the dependencies `npm install`
+4. Build the userscript with 
 ```(cat header.js; npx browserify autologin.js) > out.js```
-7. Copy paste the out.js file into a extension like tampermonkey or violentmonkey. I have tested violentmonkey. 
-8. profit :)
+5. Copy paste the out.js file into a extension like tampermonkey or violentmonkey. I have tested violentmonkey. 
+6. profit :)
 
 
 ## Demo
