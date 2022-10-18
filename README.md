@@ -15,10 +15,11 @@ To build the usescript run:
 ```mv secrets.js.example secrets.js```
 3. Enter your own login credentials and your own OTP secret you got from https://mysignins.microsoft.com/security-info.
 ```nano secrets.js``` 
-4. Build the userscript with 
+4. Install the dependencies `npm install`
+6. Build the userscript with 
 ```(cat header.js; npx browserify autologin.js) > out.js```
-5. Copy paste the out.js file into a extension like tampermonkey or violentmonkey. I have tested violentmonkey. 
-6. profit :)
+7. Copy paste the out.js file into a extension like tampermonkey or violentmonkey. I have tested violentmonkey. 
+8. profit :)
 
 
 ## Demo
