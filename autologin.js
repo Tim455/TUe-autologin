@@ -2,7 +2,7 @@ authenticator = require('otplib').authenticator;
 secrets = require('./secrets')
 
 
-if (location.pathname == "/login.srf") {
+if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess") {
     setInterval(() => {
         if (document.getElementById('idTxtBx_SAOTCC_OTC')) {
             document.getElementById('idSubmit_SAOTCC_Continue').click();
@@ -26,6 +26,7 @@ if (location.pathname == "/common/oauth2/v2.0/authorize") {
 
 if (location.pathname == "/adfs/ls/") {
     window.addEventListener('load', () => {
+        document.getElementById('userNameInput').style.type = "hidden"
         document.getElementById('userNameInput').value = secrets.username;
         document.getElementById('passwordInput').value = secrets.password;
         Login.submitLoginRequest();
