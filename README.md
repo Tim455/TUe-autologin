@@ -25,7 +25,7 @@ To build the usescript run:
 ```git clone git@github.com:Tim455/TUe-autologin.git && cd TUe-autologin```
 2. Rename secrets.js.example to secrets.js 
 ```mv secrets.js.example secrets.js```
-3. Enter your own login credentials and your own OTP secret. You are the sole person responsible for keeping this secret and password secure, by entering it into the script you know that it is less secure and decide to take the risk anyways. I do NOT take responsibility for this. 
+3. Enter your own login credentials and your own OTP secret. You are the sole person responsible for keeping this secret and password secure, by entering it into the script you know that it is less secure and decide to take the risk anyways. I do NOT take liability for this. 
 4. Install the dependencies `npm install`
 6. Build the userscript with 
 ```(cat header.js; npx browserify autologin.js) > out.js```
