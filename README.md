@@ -2,7 +2,7 @@
 This script automatically logs you into the website of the TU/e without the need of a phone to authenticate or the need to press _any_ button. See the video for a demo. 
 
 
-Please note project is not affiliated with or endorsed by the Technical Universiteit Eindhoven in any way share or form. At the moment the script is rather insecure and your username and OTP secret are stored in plain text on your computer.
+Please note project is not affiliated with or endorsed by the Technical Universiteit Eindhoven in any way shape or form. At the moment the script is rather insecure and your username and OTP secret are stored in plain text on your computer.
 
 ## Instructions
 First you have to have node.js installed. This can be installed on Linux by first installing nvm with:
