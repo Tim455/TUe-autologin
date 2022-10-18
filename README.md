@@ -1,4 +1,9 @@
 # TU/e autologin
+
+*THIS EXTENSION DOES NOT STORE YOUR PASSWORD AND OTP SECRET SECURELY*! 
+
+*Please do not* use this extension if you have access to somebody elses data. You are not the person that should decide if it is worth the risk. 
+
 This script automatically logs you into the website of the TU/e without the need of a phone to authenticate or the need to press _any_ button. See the video for a demo. 
 
 
