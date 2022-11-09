@@ -2,19 +2,23 @@ authenticator = require('otplib').authenticator;
 secrets = require('./secrets')
 
 
-// if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess") {
-//     setInterval(() => {
-//         if (document.getElementById('idTxtBx_SAOTCC_OTC')) {
-//             document.getElementById('idSubmit_SAOTCC_Continue').click();
-//             document.getElementById('idTxtBx_SAOTCC_OTC').value = authenticator.generate(secrets.otpSecret);
-//             document.getElementById('idTxtBx_SAOTCC_OTC').blur()
-//         }
-//     }, 50);
-// }
+if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess") {
+    setInterval(() => {
+        document.querySelectorAll('div[data-value="PhoneAppOTP"]')[0].click()
+    })
+
+    setInterval(() => {
+        if (document.getElementById('idTxtBx_SAOTCC_OTC')) {
+            document.getElementById('idSubmit_SAOTCC_Continue').click();
+            document.getElementById('idTxtBx_SAOTCC_OTC').value = authenticator.generate(secrets.otpSecret);
+            document.getElementById('idTxtBx_SAOTCC_OTC').blur()
+        }
+    }, 50);
+}
 
 if (location.pathname == "/common/SAS/ProcessAuth") {
     setInterval(() => {
-        if (document.getElementById(' progressBar') == null) {
+        if (document.getElementById('progressBar') == null) {
             document.getElementById('idSIButton9').click();
         }
     }, 50);
@@ -32,3 +36,4 @@ if (location.pathname == "/adfs/ls/") {
         Login.submitLoginRequest();
     }, false);
 }
+
