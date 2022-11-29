@@ -26,9 +26,8 @@ To build the usescript run:
 3. Install the dependencies `npm install`
 4. Build the userscript with 
 ```(cat header.js; npx browserify autologin.js) > out.js```
-5. Copy paste the out.js file into a extension like tampermonkey or violentmonkey. I have tested violentmonkey. 
+5. Copy paste the out.js file into a extension like Tampermonkey or Violentmonkey. I have tested Violentmonkey. 
 6. profit :)
-
 
 ## Demo
 ![A demo of the autologin script](/assets/demo.gif)
