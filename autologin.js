@@ -37,3 +37,8 @@ if (location.pathname == "/adfs/ls/") {
     }, false);
 }
 
+if (location.pathname.includes('saml2')) {
+    setInterval(() => {
+        document.getElementById('tilesHolder').querySelector('div[data-test-id="' + secrets.username + '"]').click();
+    }, 100);
+}
