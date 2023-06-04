@@ -11,7 +11,7 @@ Please note project is not affiliated with or endorsed by the Technical Universi
 ## Installation instructions
 To build the usescript run:
 1. Clone the repo with 
-```git clone git@github.com:Tim455/TUe-autologin.git && cd TUe-autologin```
+```git clone https://github.com/Tim455/TUe-autologin.git && cd TUe-autologin```
 2. Rename secrets.js.example to secrets.js
 ```mv secrets.js.example secrets.js```
 3. Edit secrets.js to contain your username, password and OTP secret
