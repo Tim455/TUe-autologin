@@ -1,11 +1,17 @@
 authenticator = require('otplib').authenticator;
 secrets = require('./secrets')
 
-
 if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess") {
+    
+    setInterval(() => {
+        if(document.getElementById('signInAnotherWay')) {
+            document.getElementById('signInAnotherWay').click();
+        }
+    }, 50);
+
     setInterval(() => {
         document.querySelectorAll('div[data-value="PhoneAppOTP"]')[0].click()
-    })
+    }, 50);
 
     setInterval(() => {
         if (document.getElementById('idTxtBx_SAOTCC_OTC')) {
