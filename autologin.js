@@ -1,7 +1,7 @@
 authenticator = require('otplib').authenticator;
 secrets = require('./secrets')
 
-if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess") {
+if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess" || location.pathname.includes('saml2')) {
     
     setInterval(() => {
         if(document.getElementById('signInAnotherWay')) {
@@ -19,6 +19,10 @@ if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess
             document.getElementById('idTxtBx_SAOTCC_OTC').value = authenticator.generate(secrets.otpSecret);
             document.getElementById('idTxtBx_SAOTCC_OTC').blur()
         }
+    }, 50);
+
+    setInterval(() => {
+        document.getElementById('tilesHolder').querySelector('div[data-test-id="' + secrets.username + '"]').click();
     }, 50);
 }
 
@@ -41,10 +45,4 @@ if (location.pathname == "/adfs/ls/") {
         document.getElementById('passwordInput').value = secrets.password;
         Login.submitLoginRequest();
     }, false);
-}
-
-if (location.pathname.includes('saml2')) {
-    setInterval(() => {
-        document.getElementById('tilesHolder').querySelector('div[data-test-id="' + secrets.username + '"]').click();
-    }, 100);
 }
