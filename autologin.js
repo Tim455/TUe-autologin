@@ -1,7 +1,7 @@
 authenticator = require('otplib').authenticator;
 secrets = require('./secrets')
 
-if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess" || location.pathname.includes('saml2')) {
+if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess" || location.pathname.includes('saml2') || location.pathname.endsWith("login")) {
     
     setInterval(() => {
         if(document.getElementById('signInAnotherWay')) {
@@ -20,6 +20,14 @@ if (location.pathname == "/login.srf" || location.pathname == "/common/reprocess
             document.getElementById('idTxtBx_SAOTCC_OTC').blur()
         }
     }, 50);
+
+    setInterval(() => {
+        if (document.getElementsByName('passwd')) {
+          document.getElementById('idSIButton9').click();
+          document.getElementsByName('passwd')[0].value = secrets.password;
+          document.getElementsByName('passwd')[0].blur();
+        }
+      }, 50);
 
     setInterval(() => {
         document.getElementById('tilesHolder').querySelector('div[data-test-id="' + secrets.username + '"]').click();
